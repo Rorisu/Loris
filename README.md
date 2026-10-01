@@ -1,78 +1,47 @@
 # Loris
 
-**CV & Portfolio**
+**Software developer · GitHub maker**
 
-I am a **[your role]** based in **[your city]**, focused on **[your strongest area of expertise]**. I help teams turn complex requirements into reliable, useful products through clear execution and thoughtful collaboration.
-
-> Replace the placeholders in square brackets with your real information.
+I build practical digital products, prototypes, and web experiences. My public GitHub work shows a hands-on profile: shipping small tools, experimenting with product ideas, and turning concepts into usable interfaces.
 
 ## Profile
 
-Write a short professional summary here: your current role, the problems you solve, the industries you know, and the value you bring to teams.
+I focus on web-facing projects with an eye for usability, clean presentation, and fast iteration. This portfolio is designed to make the work easy to scan for recruiters, collaborators, and anyone who wants a quick view of what I make.
 
-## Core Skills
+## Strengths
 
-- [Skill one]
-- [Skill two]
-- [Skill three]
-- [Tool or technology]
-- [Methodology]
-- [Language]
+- Web apps
+- UI design
+- UX structure
+- Prototyping
+- GitHub Pages
+- Repository publishing
+- Utilities
+- Communication tools
+- Learning tools
+- Contact management
 
-## Experience
+## Selected Projects
 
-### [Job Title] · [Company Name]
+### [Loris](https://github.com/Rorisu/Loris)
 
-**[2024 - Present]** · [City / Remote] · [Industry or team]
+Personal CV and portfolio page, published through GitHub Pages and also readable directly from this repository README.
 
-- Describe a concrete responsibility or achievement, preferably with a number, scale, or business outcome.
-- Mention a project, workflow, system, or process you improved.
-- Add the tools, technologies, or methods that mattered most.
+### [rubrica-telefonica](https://github.com/Rorisu/rubrica-telefonica)
 
-### [Previous Job Title] · [Company Name]
+A public project around contact management, useful as a compact example of practical application structure.
 
-**[2021 - 2024]** · [City / Remote] · [Industry or team]
+### [polyfill](https://github.com/Rorisu/polyfill)
 
-- Summarize your scope: team size, product area, clients, or operational responsibility.
-- Show evidence of impact: cost reduction, faster delivery, improved quality, or customer outcomes.
-- Include collaboration, leadership, or ownership where relevant.
+A public utility-style repository that rounds out the profile with smaller, focused development work.
 
-## Projects
+### [prova](https://github.com/Rorisu/prova)
 
-### [Project Name]
-
-One or two sentences about what the project does, your role, and why it matters.
-
-**Tech / keywords:** [Tech], [Result]
-
-### [Project Name]
-
-Explain the problem, your contribution, and the outcome in plain English.
-
-**Tech / keywords:** [Tech], [Domain]
-
-### [Project Name]
-
-Add a link to the repository or live demo when you are ready to publish it.
-
-**Tech / keywords:** [GitHub], [Demo]
-
-## Education & Certifications
-
-### [Degree or Certification] · [Institution]
-
-**[Year]**
-
-Add relevant coursework, thesis topic, honors, or certification details.
+Public repository available from the Rorisu GitHub profile.
 
 ## Contact
 
-- Email: [your.email@example.com](mailto:your.email@example.com)
-- LinkedIn: [linkedin.com/in/your-profile](https://www.linkedin.com/in/your-profile)
 - GitHub: [github.com/Rorisu](https://github.com/Rorisu)
+- Portfolio: [rorisu.github.io/Loris](https://rorisu.github.io/Loris/)
 
-## Web Version
-
-A styled GitHub Pages version is available here:
-
-[https://rorisu.github.io/Loris/](https://rorisu.github.io/Loris/)
+Private project details, email, LinkedIn, job history, education, and location can be added when you choose to publish them.

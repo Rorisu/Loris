@@ -3,28 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Loris | CV & Portfolio</title>
+    <title>Loris | Software Developer</title>
     <meta
       name="description"
-      content="Personal CV, work experience, projects, skills, and contact information."
+      content="Portfolio and CV for Loris, software developer and GitHub maker."
     />
     <link
       rel="icon"
       type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1726'/%3E%3Cpath d='M18 44V20h13c8 0 15 4 15 12s-7 12-15 12H18Zm8-7h5c5 0 8-2 8-5s-3-5-8-5h-5v10Z' fill='%23f7c948'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23061014'/%3E%3Cpath d='M15 44V17h8v20h24v7H15Z' fill='%23f4c95d'/%3E%3Cpath d='M30 20h18v7H30v-7Zm0 11h14v7H30v-7Z' fill='%235be7c4'/%3E%3C/svg%3E"
     />
     <style>
       :root {
-        color-scheme: light;
-        --ink: #101828;
-        --muted: #667085;
-        --paper: #f7f8fb;
-        --surface: #ffffff;
-        --line: #d8dde8;
-        --accent: #0f766e;
-        --accent-strong: #115e59;
-        --gold: #f7c948;
-        --shadow: 0 18px 50px rgba(16, 24, 40, 0.08);
+        color-scheme: dark;
+        --bg: #071014;
+        --panel: rgba(15, 31, 37, 0.76);
+        --text: #f6fbfc;
+        --muted: #9bb2ba;
+        --line: rgba(195, 229, 236, 0.16);
+        --mint: #5be7c4;
+        --blue: #75b8ff;
+        --gold: #f4c95d;
+        --shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
       }
 
       * {
@@ -37,11 +37,12 @@
 
       body {
         margin: 0;
+        min-width: 320px;
         background:
-          linear-gradient(135deg, rgba(15, 118, 110, 0.1), transparent 32rem),
-          linear-gradient(315deg, rgba(247, 201, 72, 0.18), transparent 28rem),
-          var(--paper);
-        color: var(--ink);
+          radial-gradient(circle at 18% 8%, rgba(91, 231, 196, 0.18), transparent 28rem),
+          radial-gradient(circle at 82% 18%, rgba(117, 184, 255, 0.16), transparent 30rem),
+          linear-gradient(180deg, #071014 0%, #0a1418 54%, #071014 100%);
+        color: var(--text);
         font-family:
           Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", sans-serif;
@@ -49,22 +50,34 @@
         line-height: 1.6;
       }
 
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(to bottom, black, transparent 78%);
+        content: "";
+      }
+
       a {
         color: inherit;
       }
 
       .page {
-        width: min(1120px, calc(100% - 32px));
+        width: min(1160px, calc(100% - 32px));
         margin: 0 auto;
       }
 
       .site-header {
         position: sticky;
         top: 0;
-        z-index: 10;
-        border-bottom: 1px solid rgba(216, 221, 232, 0.78);
-        background: rgba(247, 248, 251, 0.88);
-        backdrop-filter: blur(16px);
+        z-index: 20;
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 16, 20, 0.84);
+        backdrop-filter: blur(18px);
       }
 
       .nav {
@@ -72,14 +85,13 @@
         align-items: center;
         justify-content: space-between;
         min-height: 72px;
-        gap: 24px;
+        gap: 20px;
       }
 
       .brand {
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        font-weight: 800;
         text-decoration: none;
       }
 
@@ -88,39 +100,77 @@
         width: 42px;
         height: 42px;
         place-items: center;
+        border: 1px solid rgba(91, 231, 196, 0.34);
         border-radius: 8px;
-        background: var(--ink);
-        color: var(--gold);
+        background: linear-gradient(135deg, rgba(91, 231, 196, 0.18), rgba(117, 184, 255, 0.1));
+        color: var(--mint);
         font-weight: 900;
+      }
+
+      .brand-text {
+        display: grid;
+        line-height: 1.1;
+      }
+
+      .brand-text strong {
+        font-size: 1rem;
+      }
+
+      .brand-text span {
+        color: var(--muted);
+        font-size: 0.82rem;
       }
 
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 20px;
-        color: var(--muted);
-        font-size: 0.95rem;
+        gap: 8px;
       }
 
       .nav-links a {
+        border-radius: 999px;
+        color: var(--muted);
+        padding: 8px 12px;
+        font-size: 0.92rem;
+        font-weight: 700;
         text-decoration: none;
       }
 
       .nav-links a:hover {
-        color: var(--accent-strong);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
       }
 
       .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-        gap: 48px;
-        align-items: center;
-        padding: 76px 0 56px;
+        grid-template-columns: minmax(0, 1.1fr) 360px;
+        gap: 34px;
+        align-items: stretch;
+        padding: 72px 0 36px;
+      }
+
+      .hero-copy {
+        display: grid;
+        align-content: center;
+        min-height: 560px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgba(17, 38, 45, 0.86), rgba(17, 38, 45, 0.42)),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent);
+        box-shadow: var(--shadow);
+        padding: clamp(28px, 6vw, 64px);
       }
 
       .eyebrow {
-        margin: 0 0 14px;
-        color: var(--accent-strong);
+        display: inline-flex;
+        width: max-content;
+        margin: 0 0 18px;
+        border: 1px solid rgba(91, 231, 196, 0.34);
+        border-radius: 999px;
+        background: rgba(91, 231, 196, 0.08);
+        color: var(--mint);
+        padding: 6px 10px;
         font-size: 0.82rem;
         font-weight: 800;
         letter-spacing: 0;
@@ -135,175 +185,192 @@
       }
 
       h1 {
-        max-width: 12ch;
+        max-width: 10ch;
         margin-bottom: 18px;
-        font-size: clamp(3rem, 8vw, 5.9rem);
-        line-height: 0.95;
+        font-size: clamp(3.6rem, 11vw, 7.8rem);
+        line-height: 0.88;
         letter-spacing: 0;
       }
 
       .lead {
-        max-width: 670px;
-        color: #344054;
-        font-size: 1.2rem;
+        max-width: 680px;
+        margin-bottom: 0;
+        color: #d7e6ea;
+        font-size: clamp(1.08rem, 2vw, 1.34rem);
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        margin-top: 30px;
+        margin-top: 34px;
       }
 
       .button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 46px;
-        padding: 0 18px;
+        min-height: 48px;
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: var(--surface);
-        box-shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
-        font-weight: 750;
+        padding: 0 17px;
+        background: rgba(255, 255, 255, 0.055);
+        color: var(--text);
+        font-weight: 800;
         text-decoration: none;
+        transition:
+          transform 160ms ease,
+          border-color 160ms ease,
+          background 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        border-color: rgba(91, 231, 196, 0.5);
+        background: rgba(255, 255, 255, 0.08);
       }
 
       .button.primary {
-        border-color: var(--accent);
-        background: var(--accent);
-        color: #ffffff;
+        border-color: rgba(91, 231, 196, 0.72);
+        background: var(--mint);
+        color: #061014;
       }
 
-      .profile-panel {
+      .profile-card {
+        display: grid;
+        gap: 16px;
+        align-content: start;
+      }
+
+      .avatar-panel,
+      .stat-panel {
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.86);
-        box-shadow: var(--shadow);
+        background: var(--panel);
+        box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
         overflow: hidden;
       }
 
-      .portrait {
-        display: grid;
-        min-height: 260px;
-        place-items: center;
-        background:
-          linear-gradient(145deg, rgba(15, 118, 110, 0.92), rgba(16, 24, 40, 0.92)),
-          radial-gradient(circle at 70% 20%, rgba(247, 201, 72, 0.85), transparent 12rem);
-        color: #ffffff;
+      .avatar-panel {
+        padding: 18px;
       }
 
-      .portrait-initials {
-        display: grid;
-        width: 132px;
-        height: 132px;
-        place-items: center;
-        border: 2px solid rgba(255, 255, 255, 0.72);
-        border-radius: 50%;
-        color: var(--gold);
-        font-size: 3rem;
-        font-weight: 900;
+      .avatar {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+        object-fit: cover;
       }
 
-      .quick-facts {
-        display: grid;
-        gap: 14px;
-        padding: 24px;
+      .identity {
+        padding: 18px 4px 2px;
       }
 
-      .fact {
-        display: flex;
-        justify-content: space-between;
-        gap: 18px;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 12px;
+      .identity h2 {
+        margin-bottom: 4px;
+        font-size: 1.45rem;
       }
 
-      .fact:last-child {
-        border-bottom: 0;
-        padding-bottom: 0;
-      }
-
-      .fact span:first-child {
+      .identity p {
+        margin-bottom: 0;
         color: var(--muted);
       }
 
-      .fact span:last-child {
-        text-align: right;
-        font-weight: 750;
+      .stat-panel {
+        display: grid;
+        gap: 1px;
+        background: var(--line);
       }
 
-      section {
-        padding: 34px 0;
+      .stat {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        background: rgba(13, 27, 32, 0.94);
+        padding: 16px;
+      }
+
+      .stat span:first-child {
+        color: var(--muted);
+      }
+
+      .stat span:last-child {
+        text-align: right;
+        font-weight: 850;
+      }
+
+      .section {
+        padding: 42px 0;
       }
 
       .section-heading {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.5fr);
         gap: 24px;
+        align-items: end;
         margin-bottom: 18px;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 14px;
       }
 
       h2 {
         margin-bottom: 0;
-        font-size: clamp(1.7rem, 3vw, 2.25rem);
-        line-height: 1.1;
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        line-height: 0.98;
       }
 
       .section-heading p {
-        max-width: 460px;
         margin-bottom: 0;
         color: var(--muted);
       }
 
-      .summary-grid {
+      .grid-2 {
         display: grid;
-        grid-template-columns: 0.85fr 1.15fr;
-        gap: 24px;
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+        gap: 16px;
       }
 
-      .surface,
-      .timeline-item,
-      .project-card {
+      .panel,
+      .project,
+      .timeline-item {
         border: 1px solid var(--line);
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 10px 32px rgba(16, 24, 40, 0.05);
+        background: rgba(13, 27, 32, 0.72);
       }
 
-      .surface {
+      .panel {
         padding: 24px;
       }
 
-      .surface h3,
-      .timeline-item h3,
-      .project-card h3 {
-        margin-bottom: 6px;
-        font-size: 1.08rem;
+      .panel h3,
+      .project h3,
+      .timeline-item h3 {
+        margin-bottom: 8px;
+        font-size: 1.13rem;
       }
 
-      .tag-list,
-      .skill-list {
+      .panel p,
+      .project p,
+      .timeline-item p {
+        color: #c4d7dc;
+      }
+
+      .skills {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        padding: 0;
         margin: 0;
+        padding: 0;
         list-style: none;
       }
 
-      .tag-list li,
-      .skill-list li {
-        border: 1px solid rgba(15, 118, 110, 0.22);
+      .skills li {
+        border: 1px solid rgba(117, 184, 255, 0.28);
         border-radius: 999px;
-        background: rgba(15, 118, 110, 0.08);
-        color: #134e4a;
-        padding: 7px 11px;
-        font-size: 0.92rem;
-        font-weight: 650;
+        background: rgba(117, 184, 255, 0.09);
+        color: #dceeff;
+        padding: 8px 11px;
+        font-weight: 750;
       }
 
       .timeline {
@@ -313,24 +380,25 @@
 
       .timeline-item {
         display: grid;
-        grid-template-columns: 180px minmax(0, 1fr);
+        grid-template-columns: 190px minmax(0, 1fr);
         gap: 24px;
         padding: 24px;
       }
 
       .period {
-        color: var(--accent-strong);
-        font-weight: 800;
+        color: var(--gold);
+        font-weight: 900;
       }
 
       .meta {
         color: var(--muted);
-        font-size: 0.95rem;
+        font-size: 0.94rem;
       }
 
       .timeline-item ul {
         margin: 14px 0 0;
-        padding-left: 1.15rem;
+        padding-left: 1.1rem;
+        color: #d1e1e5;
       }
 
       .timeline-item li + li {
@@ -343,12 +411,71 @@
         gap: 16px;
       }
 
-      .project-card {
+      .project {
+        display: grid;
+        min-height: 260px;
+        align-content: space-between;
         padding: 22px;
+        transition:
+          transform 160ms ease,
+          border-color 160ms ease,
+          background 160ms ease;
       }
 
-      .project-card p {
-        color: #475467;
+      .project:hover {
+        transform: translateY(-4px);
+        border-color: rgba(91, 231, 196, 0.42);
+        background: rgba(17, 38, 45, 0.84);
+      }
+
+      .project-top {
+        display: grid;
+        gap: 10px;
+      }
+
+      .project-label {
+        width: max-content;
+        border-radius: 999px;
+        background: rgba(244, 201, 93, 0.11);
+        color: var(--gold);
+        padding: 5px 9px;
+        font-size: 0.78rem;
+        font-weight: 850;
+        text-transform: uppercase;
+      }
+
+      .project-link {
+        display: inline-flex;
+        width: max-content;
+        margin-top: 20px;
+        color: var(--mint);
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .repo-strip {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .repo-chip {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.045);
+        padding: 14px;
+        text-decoration: none;
+      }
+
+      .repo-chip strong {
+        display: block;
+        overflow-wrap: anywhere;
+      }
+
+      .repo-chip span {
+        color: var(--muted);
+        font-size: 0.9rem;
       }
 
       .contact {
@@ -356,16 +483,20 @@
         grid-template-columns: minmax(0, 1fr) auto;
         gap: 24px;
         align-items: center;
-        margin: 36px 0 64px;
-        border: 1px solid rgba(15, 118, 110, 0.24);
+        margin: 42px 0 56px;
+        border: 1px solid rgba(91, 231, 196, 0.34);
         border-radius: 8px;
-        background: #0e1726;
-        color: #ffffff;
-        padding: 28px;
+        background:
+          linear-gradient(135deg, rgba(91, 231, 196, 0.16), transparent),
+          #0a171b;
+        box-shadow: var(--shadow);
+        padding: clamp(24px, 5vw, 42px);
       }
 
       .contact p {
-        color: #d0d5dd;
+        max-width: 650px;
+        margin-bottom: 0;
+        color: #c4d7dc;
       }
 
       .contact-links {
@@ -375,59 +506,72 @@
         justify-content: flex-end;
       }
 
-      .contact-links a {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        padding: 10px 12px;
-        color: #ffffff;
-        text-decoration: none;
-      }
-
       footer {
-        padding: 24px 0 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        border-top: 1px solid var(--line);
+        padding: 24px 0 38px;
         color: var(--muted);
         font-size: 0.94rem;
       }
 
-      @media (max-width: 860px) {
+      @media (max-width: 960px) {
+        .hero,
+        .grid-2,
+        .section-heading,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy {
+          min-height: auto;
+        }
+
+        .profile-card {
+          grid-template-columns: minmax(0, 0.85fr) minmax(260px, 1fr);
+        }
+
+        .projects-grid,
+        .repo-strip {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .contact-links {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: 680px) {
         .nav {
           align-items: flex-start;
           flex-direction: column;
-          padding: 16px 0;
+          padding: 14px 0;
         }
 
         .nav-links {
           width: 100%;
           overflow-x: auto;
-          padding-bottom: 4px;
-        }
-
-        .hero,
-        .summary-grid,
-        .contact {
-          grid-template-columns: 1fr;
+          padding-bottom: 3px;
         }
 
         .hero {
-          padding-top: 48px;
+          padding-top: 38px;
         }
 
-        h1 {
-          max-width: 10ch;
-        }
-
-        .section-heading {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-
-        .timeline-item,
-        .projects-grid {
+        .profile-card,
+        .projects-grid,
+        .repo-strip,
+        .timeline-item {
           grid-template-columns: 1fr;
         }
 
-        .contact-links {
-          justify-content: flex-start;
+        h1 {
+          max-width: 9ch;
+        }
+
+        footer {
+          flex-direction: column;
         }
       }
     </style>
@@ -437,13 +581,15 @@
       <nav class="page nav" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="Back to top">
           <span class="brand-mark">LR</span>
-          <span>Loris</span>
+          <span class="brand-text">
+            <strong>Loris</strong>
+            <span>github.com/Rorisu</span>
+          </span>
         </a>
         <div class="nav-links">
           <a href="#profile">Profile</a>
-          <a href="#experience">Experience</a>
+          <a href="#work">Work</a>
           <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -451,184 +597,205 @@
 
     <main id="top" class="page">
       <section class="hero" aria-labelledby="hero-title">
-        <div>
-          <p class="eyebrow">Curriculum vitae & portfolio</p>
+        <div class="hero-copy">
+          <p class="eyebrow">Software developer · GitHub maker</p>
           <h1 id="hero-title">Loris</h1>
           <p class="lead">
-            I am a [your role] based in [your city], focused on [your strongest
-            area of expertise]. I help teams turn complex requirements into
-            reliable, useful products through clear execution and thoughtful
-            collaboration.
+            I build practical digital products, prototypes, and web experiences.
+            My public GitHub work shows a hands-on profile: shipping small tools,
+            experimenting with product ideas, and turning concepts into usable
+            interfaces.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Contact me</a>
-            <a class="button" href="#experience">View experience</a>
+            <a class="button primary" href="https://github.com/Rorisu">View GitHub</a>
+            <a class="button" href="#projects">Selected projects</a>
           </div>
         </div>
 
-        <aside class="profile-panel" aria-label="Quick profile facts">
-          <div class="portrait">
-            <div class="portrait-initials">LR</div>
+        <aside class="profile-card" aria-label="Profile snapshot">
+          <div class="avatar-panel">
+            <img
+              class="avatar"
+              src="https://avatars.githubusercontent.com/u/56926944?v=4"
+              alt="GitHub avatar for Rorisu"
+            />
+            <div class="identity">
+              <h2>Rorisu</h2>
+              <p>Developer profile on GitHub</p>
+            </div>
           </div>
-          <div class="quick-facts">
-            <div class="fact">
-              <span>Role</span>
-              <span>[Your role]</span>
+          <div class="stat-panel" aria-label="Known public details">
+            <div class="stat">
+              <span>Public profile</span>
+              <span>Rorisu</span>
             </div>
-            <div class="fact">
-              <span>Location</span>
-              <span>[City, Country]</span>
+            <div class="stat">
+              <span>Portfolio repo</span>
+              <span>Loris</span>
             </div>
-            <div class="fact">
-              <span>Availability</span>
-              <span>[Open / Not open]</span>
+            <div class="stat">
+              <span>Public projects</span>
+              <span>4 visible</span>
             </div>
           </div>
         </aside>
       </section>
 
-      <section id="profile" aria-labelledby="profile-title">
+      <section id="profile" class="section" aria-labelledby="profile-title">
         <div class="section-heading">
           <h2 id="profile-title">Profile</h2>
-          <p>A concise introduction for recruiters, clients, and collaborators.</p>
+          <p>
+            A concise, honest snapshot based on the GitHub information already
+            available here.
+          </p>
         </div>
-        <div class="summary-grid">
-          <article class="surface">
-            <h3>About</h3>
+        <div class="grid-2">
+          <article class="panel">
+            <h3>What I focus on</h3>
             <p>
-              Replace this paragraph with a short professional summary: your
-              current role, the kind of problems you solve, the industries you
-              know, and the value you bring to teams.
+              Building web-facing projects with an eye for usability, clean
+              presentation, and fast iteration. This portfolio is designed to
+              make the work easy to scan for recruiters, collaborators, and
+              anyone who wants a quick view of what I make.
             </p>
           </article>
-          <article class="surface">
-            <h3>Core skills</h3>
-            <ul class="skill-list" aria-label="Core skills">
-              <li>[Skill one]</li>
-              <li>[Skill two]</li>
-              <li>[Skill three]</li>
-              <li>[Tool or technology]</li>
-              <li>[Methodology]</li>
-              <li>[Language]</li>
+          <article class="panel">
+            <h3>Working style</h3>
+            <p>
+              Product-minded, practical, and comfortable moving from an idea to
+              a working version. The emphasis is on clear interfaces, visible
+              progress, and projects that can be opened, tested, and improved.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section-heading">
+          <h2 id="work-title">Strengths</h2>
+          <p>
+            Skills inferred from the kind of projects in the GitHub workspace,
+            without inventing employers, degrees, or private background.
+          </p>
+        </div>
+        <div class="grid-2">
+          <article class="panel">
+            <h3>Product development</h3>
+            <ul class="skills" aria-label="Product development skills">
+              <li>Web apps</li>
+              <li>UI design</li>
+              <li>UX structure</li>
+              <li>Prototyping</li>
+              <li>GitHub Pages</li>
+              <li>Repository publishing</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>Project areas</h3>
+            <ul class="skills" aria-label="Project areas">
+              <li>Utilities</li>
+              <li>Communication tools</li>
+              <li>Learning tools</li>
+              <li>Contact management</li>
+              <li>Frontend polish</li>
+              <li>Personal portfolio</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="experience" aria-labelledby="experience-title">
+      <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="section-heading">
-          <h2 id="experience-title">Experience</h2>
-          <p>Highlight your most relevant roles and measurable achievements.</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div>
-              <div class="period">[2024 - Present]</div>
-              <div class="meta">[Company name]</div>
-            </div>
-            <div>
-              <h3>[Job Title]</h3>
-              <p class="meta">[City / Remote] · [Industry or team]</p>
-              <ul>
-                <li>
-                  Describe a concrete responsibility or achievement, preferably
-                  with a number, scale, or business outcome.
-                </li>
-                <li>
-                  Mention a project, workflow, system, or process you improved.
-                </li>
-                <li>
-                  Add the tools, technologies, or methods that mattered most.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div>
-              <div class="period">[2021 - 2024]</div>
-              <div class="meta">[Company name]</div>
-            </div>
-            <div>
-              <h3>[Previous Job Title]</h3>
-              <p class="meta">[City / Remote] · [Industry or team]</p>
-              <ul>
-                <li>
-                  Summarize your scope: team size, product area, clients, or
-                  operational responsibility.
-                </li>
-                <li>
-                  Show evidence of impact: cost reduction, faster delivery,
-                  improved quality, or customer outcomes.
-                </li>
-                <li>
-                  Include collaboration, leadership, or ownership where relevant.
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <h2 id="projects-title">Projects</h2>
-          <p>Use this area for selected work, case studies, or GitHub repositories.</p>
+          <h2 id="projects-title">Selected Projects</h2>
+          <p>
+            Public GitHub repositories are linked directly. Private work is not
+            exposed here until you choose to make it public.
+          </p>
         </div>
         <div class="projects-grid">
-          <article class="project-card">
-            <h3>[Project name]</h3>
-            <p>
-              One or two sentences about what the project does, your role, and
-              why it matters.
-            </p>
-            <ul class="tag-list">
-              <li>[Tech]</li>
-              <li>[Result]</li>
-            </ul>
+          <article class="project">
+            <div class="project-top">
+              <span class="project-label">Portfolio</span>
+              <h3>Loris</h3>
+              <p>
+                Personal CV and portfolio page, published through GitHub Pages
+                and also readable directly from the repository README.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/Rorisu/Loris">Open repository</a>
           </article>
-          <article class="project-card">
-            <h3>[Project name]</h3>
-            <p>
-              Explain the problem, your contribution, and the outcome in plain
-              English.
-            </p>
-            <ul class="tag-list">
-              <li>[Tech]</li>
-              <li>[Domain]</li>
-            </ul>
+
+          <article class="project">
+            <div class="project-top">
+              <span class="project-label">Application</span>
+              <h3>rubrica-telefonica</h3>
+              <p>
+                A public project around contact management, useful as a compact
+                example of practical application structure.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/Rorisu/rubrica-telefonica">Open repository</a>
           </article>
-          <article class="project-card">
-            <h3>[Project name]</h3>
-            <p>
-              Add a link to the repository or live demo when you are ready to
-              publish it.
-            </p>
-            <ul class="tag-list">
-              <li>[GitHub]</li>
-              <li>[Demo]</li>
-            </ul>
+
+          <article class="project">
+            <div class="project-top">
+              <span class="project-label">Utility</span>
+              <h3>polyfill</h3>
+              <p>
+                A public utility-style repository that rounds out the profile
+                with smaller, focused development work.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/Rorisu/polyfill">Open repository</a>
           </article>
+        </div>
+
+        <div class="repo-strip" aria-label="More public repositories">
+          <a class="repo-chip" href="https://github.com/Rorisu/prova">
+            <strong>prova</strong>
+            <span>Public repository</span>
+          </a>
+          <a class="repo-chip" href="https://github.com/Rorisu/Loris">
+            <strong>Loris</strong>
+            <span>CV and portfolio</span>
+          </a>
+          <a class="repo-chip" href="https://github.com/Rorisu/polyfill">
+            <strong>polyfill</strong>
+            <span>Utility work</span>
+          </a>
+          <a class="repo-chip" href="https://github.com/Rorisu/rubrica-telefonica">
+            <strong>rubrica-telefonica</strong>
+            <span>Contact app</span>
+          </a>
         </div>
       </section>
 
-      <section id="education" aria-labelledby="education-title">
+      <section class="section" aria-labelledby="timeline-title">
         <div class="section-heading">
-          <h2 id="education-title">Education & Certifications</h2>
-          <p>Add degrees, courses, professional certifications, and languages.</p>
+          <h2 id="timeline-title">Now</h2>
+          <p>
+            A simple timeline that stays accurate until you send me exact job,
+            education, and contact details.
+          </p>
         </div>
         <div class="timeline">
           <article class="timeline-item">
             <div>
-              <div class="period">[Year]</div>
-              <div class="meta">[Institution]</div>
+              <div class="period">Current</div>
+              <div class="meta">GitHub portfolio</div>
             </div>
             <div>
-              <h3>[Degree or certification]</h3>
+              <h3>Building and publishing software projects</h3>
               <p>
-                Add relevant coursework, thesis topic, honors, or certification
-                details.
+                Maintaining a public GitHub presence through the Rorisu account,
+                with a dedicated portfolio repository and selected public
+                projects available for review.
               </p>
+              <ul>
+                <li>Published a personal CV and portfolio with GitHub Pages.</li>
+                <li>Organized the page around real public repositories.</li>
+                <li>Kept private project names and details out of the public page.</li>
+              </ul>
             </div>
           </article>
         </div>
@@ -636,22 +803,23 @@
 
       <section id="contact" class="contact" aria-labelledby="contact-title">
         <div>
-          <h2 id="contact-title">Let’s work together</h2>
+          <h2 id="contact-title">Contact</h2>
           <p>
-            Replace these links with your real email, LinkedIn, GitHub, and any
-            other professional profiles you want visitors to use.
+            The safest public contact point right now is GitHub. Add email,
+            LinkedIn, location, and a downloadable CV once you want those
+            details published.
           </p>
         </div>
         <div class="contact-links">
-          <a href="mailto:your.email@example.com">Email</a>
-          <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
-          <a href="https://github.com/your-username">GitHub</a>
+          <a class="button primary" href="https://github.com/Rorisu">GitHub profile</a>
+          <a class="button" href="https://github.com/Rorisu/Loris">Repository</a>
         </div>
       </section>
     </main>
 
     <footer class="page">
-      <span>© 2026 Loris. Built for GitHub Pages.</span>
+      <span>© 2026 Loris</span>
+      <span>Built for GitHub Pages · Last updated from the Rorisu portfolio repository</span>
     </footer>
   </body>
 </html>
