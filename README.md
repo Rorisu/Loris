@@ -1,47 +1,52 @@
 # Loris
 
-**Software developer · GitHub maker**
+**React Native & Mobile Developer**
 
-I build practical digital products, prototypes, and web experiences. My public GitHub work shows a hands-on profile: shipping small tools, experimenting with product ideas, and turning concepts into usable interfaces.
+I build mobile and web applications with a strong focus on practical workflows, clean interfaces, and reliable field operations. My work spans React Native, Android builds, barcode scanning, inventory, orders, goods documents, direct loads, database migrations, and multilingual product interfaces.
 
 ## Profile
 
-I focus on web-facing projects with an eye for usability, clean presentation, and fast iteration. This portfolio is designed to make the work easy to scan for recruiters, collaborators, and anyone who wants a quick view of what I make.
+I work on React Native and Android applications for operational workflows: scanning articles, managing orders, inventory rows, direct loads, and goods documents. I care about fast screens, clear flows, and interfaces that stay usable under pressure.
 
-## Strengths
+## Technical Strengths
 
-- Web apps
-- UI design
-- UX structure
-- Prototyping
-- GitHub Pages
-- Repository publishing
-- Utilities
-- Communication tools
-- Learning tools
-- Contact management
+- React Native
+- TypeScript
+- Android APK builds
+- Mobile UI/UX
+- Scanner flows
+- Scandit integration checks
+- Release validation
+- SQLite and local database migrations
+- API mapping
+- Italian and Albanian localization
 
-## Selected Projects
+## Business Domains
 
-### [Loris](https://github.com/Rorisu/Loris)
+- Orders
+- Inventory
+- Direct loads
+- Goods documents
+- Article lookup
+- Warehouse workflows
 
-Personal CV and portfolio page, published through GitHub Pages and also readable directly from this repository README.
+## Professional Work
 
-### [rubrica-telefonica](https://github.com/Rorisu/rubrica-telefonica)
+### Operational React Native app
 
-A public project around contact management, useful as a compact example of practical application structure.
+Development and refinement of a React Native application for operational workflows, with attention to screen structure, navigation, state, logs, and Android release builds.
 
-### [polyfill](https://github.com/Rorisu/polyfill)
+### Barcode and article lookup
 
-A public utility-style repository that rounds out the profile with smaller, focused development work.
+Scanner-driven flows for article information and warehouse operations, including Scandit integration checks and APK verification for production-ready builds.
 
-### [prova](https://github.com/Rorisu/prova)
+### Orders, inventory, and documents
 
-Public repository available from the Rorisu GitHub profile.
+Work across order detail screens, inventory rows, direct load screens, goods document cards/actions, API mappers, and local database migration structure.
 
 ## Contact
 
 - GitHub: [github.com/Rorisu](https://github.com/Rorisu)
 - Portfolio: [rorisu.github.io/Loris](https://rorisu.github.io/Loris/)
 
-Private project details, email, LinkedIn, job history, education, and location can be added when you choose to publish them.
+Email, LinkedIn, education, and a downloadable PDF CV can be added when those details are ready to publish.
